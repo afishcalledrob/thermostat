@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<script src="src/thermostat.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="src/jquery.js"></script>
+<head>
+  <title>THERMOSTAT</title>
+</head>
+<style>
+  #energyuse {
+    border: solid black;
+    color: red;
+    font-size: 20px;
+    width: 500px;
+  }
+  #powersaver {
+    width: 480px;
+    padding: 10px;
+    font-size: 30px;
+
+  }
+  #reset {
+    font-size: 20px;
+    width: 100px;
+    padding: 10px;
+
+
+  }
+
+  input[type="button"]{
+-moz-appearance: none;
+-webkit-appearance: none;
+appearance: none;
+width: 100px;
+padding: 10px;
+font-size: 20px;
+}
+
+  #currenttemperature {
+    border: solid black;
+    width: 500px;
+  }
+
+</style>
+<body>
+  <p> Temperature Control </p>
+  <div id="PowerSaverController">
+    <input type='range' min='10' max='25' value='20' class='slider'>
+  </div>
+  <p> Current Temperature </p>
+  <div id="currenttemperature">
+    <h1 id="temperature">
+
+    </h1>
+  </div>
+<fieldset id="powersaver">
+  <legend>Power Saver</legend>
+  <div>
+    <input type="radio" id="PowerSaverOn" name="Power Saver" value="On" checked>
+    <label for="PowerSaverOn">On</label>
+  </div>
+  <div>
+    <input type="radio" id="PowerSaverOff" name="Power Saver" value="Off">
+    <label for="PowerSaverOff">Off</label>
+  </div>
+</fieldset>
+  <div id="reset">
+    <input type="button" class='btn' value="Reset">
+  </div>
+<div id="energyuse">
+<h2>
+Power usage will go here
+</h2>
+</div>
+
+</body>
+</html>
